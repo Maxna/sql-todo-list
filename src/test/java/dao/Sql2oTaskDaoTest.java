@@ -4,8 +4,6 @@ import models.Task;
 import org.sql2o.*;
 import org.junit.*;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class Sql2oTaskDaoTest {
@@ -75,7 +73,7 @@ public class Sql2oTaskDaoTest {
     }
 
     @Test
-    public void delete_deletesAllTasks_0() throws Exception{
+    public void clearAll_deletesAllTasks_0() throws Exception{
         Task task = new Task("mow the lawn");
         Task newTask = new Task("Other stuff");
         taskDao.add(task);
